@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LogItem } from "./components/log-list/log-item.interface";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  logItems: LogItem[] = [{
+    description: 'Log item 1',
+    timestamp: 1000
+  }, {
+    description: 'Log item 2',
+    timestamp: 2000
+  }];
 }
